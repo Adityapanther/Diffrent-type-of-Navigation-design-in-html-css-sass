@@ -4,7 +4,7 @@
     font-size: 18px;
     list-style-type: none;
     text-decoration: none;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 body{
@@ -42,7 +42,7 @@ body{
                 align-items: center;
                 justify-content: space-evenly;
                 li{
-                    padding: 10px 15px;
+                    padding: 1px 10px;
                     a{
                         font-weight: bold;
                         text-transform: uppercase;
@@ -54,9 +54,50 @@ body{
                 }
 
                 li:hover {
-                    background-color: rgb(95, 6, 73);
+                    border-bottom: 3px solid #000;
+                    // background-color: rgb(95, 6, 73);
                 }
             }
         }
+
+        .hamber-container{
+            width: 90%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .expand-icon{
+                margin-right: 1em;
+                width: auto;
+                height: auto;
+
+            }
+        }
     }
+}
+
+@media Screen and(max-width:400px){
+
+    .nav{
+        position: fixed;
+        top:55px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 99999;
+        height: 100%;
+        background-color: rgb(19, 19, 19);
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            li{
+                padding: 0;
+            }
+        }
+        
+    }
+
 }
