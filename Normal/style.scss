@@ -79,25 +79,33 @@ body{
 
 @media Screen and(max-width:400px){
 
-    .nav{
-        position: fixed;
-        top:55px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 99999;
-        height: 100%;
-        background-color: rgb(19, 19, 19);
-        ul{
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+    body{
+        header{
+            .nav {
+                position: fixed;
+                top: 55px;
+                left: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: rgb(19, 19, 19);
 
-            li{
-                padding: 0;
+                ul {
+                    display: block;
+
+                    li{
+                        margin: 10px;
+                        a{
+                            font-size: 0.6rem;
+                        }
+                    }
+                    
+                }
+
             }
         }
-        
     }
 
 }
