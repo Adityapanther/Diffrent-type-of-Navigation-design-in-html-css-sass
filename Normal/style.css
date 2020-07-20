@@ -87,24 +87,16 @@ body header .nav ul li:hover {
 body header .hamber-container {
   width: 90%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
-body header .hamber-container .expand-icon {
-  margin-right: 1em;
-  width: auto;
-  height: auto;
-}
-
-@media Screen and (max-width: 400px) {
+@media Screen and (max-width: 570px) {
   body header .nav {
     position: fixed;
     top: 55px;
@@ -114,6 +106,7 @@ body header .hamber-container .expand-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    opacity: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -126,7 +119,32 @@ body header .hamber-container .expand-icon {
     margin: 10px;
   }
   body header .nav ul li a {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
+  body header .hamber-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media Screen and (max-width: 300px) {
+  a {
+    font-size: 0.6rem !important;
+  }
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  opacity: 1 !important;
+}
+
+.top-icon {
+  margin-right: 1em;
+  width: auto;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

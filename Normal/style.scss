@@ -63,21 +63,16 @@ body{
         .hamber-container{
             width: 90%;
             height: 100%;
-            display: flex;
             justify-content: flex-end;
             align-items: center;
+            display: none;
 
-            .expand-icon{
-                margin-right: 1em;
-                width: auto;
-                height: auto;
-
-            }
+        
         }
     }
 }
 
-@media Screen and(max-width:400px){
+@media Screen and(max-width:570px){
 
     body{
         header{
@@ -88,6 +83,7 @@ body{
                 width: 50%;
                 height: 100%;
                 display: flex;
+                opacity: 0;
                 justify-content: center;
                 background-color: rgb(19, 19, 19);
 
@@ -97,14 +93,38 @@ body{
                     li{
                         margin: 10px;
                         a{
-                            font-size: 0.6rem;
+                            font-size: 0.8rem;
                         }
                     }
                     
                 }
 
             }
+
+            .hamber-container{
+                display: flex;
+            }
         }
     }
 
+}
+
+@media Screen and(max-width:300px){
+    a{
+        font-size: 0.6rem !important;
+    }
+}
+
+.invisible{
+    display: none;
+}
+
+.visible{
+    opacity: 1 !important;
+}
+
+.top-icon{
+    margin-right: 1em;
+    width: auto;
+    height: auto;
 }
