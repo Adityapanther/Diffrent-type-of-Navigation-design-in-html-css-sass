@@ -82,8 +82,7 @@ body{
                 right: 0;
                 width: 50%;
                 height: 100%;
-                display: flex;
-                opacity: 0;
+                display: none;
                 justify-content: center;
                 background-color: rgb(19, 19, 19);
 
@@ -116,11 +115,24 @@ body{
 }
 
 .invisible{
+    
     display: none;
 }
 
 .visible{
-    opacity: 1 !important;
+    display: flex !important;
+    animation: reveal 1s ease-in-out;
+}
+
+
+
+@keyframes reveal{
+ from{
+        right: -180px;
+    }
+    to{
+        right: 0;
+    }
 }
 
 .top-icon{
